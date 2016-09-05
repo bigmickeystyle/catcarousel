@@ -1,0 +1,59 @@
+#container{
+    width: 2400px;
+    height: 600px;
+}
+
+.whitebox{
+    background-color: white;
+    height: 600px;
+    width: 800px;
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+}
+
+.whitebox#right{
+    left: 1600px;
+}
+
+.cat {
+    width: 800px;
+    height: 600px;
+    background-size: 800px 600px, cover;
+    position: absolute;
+    left: 1600px;
+}
+
+.still {
+    left: 1600px;
+}
+
+.moving {
+    transition-property: transform;
+    transition-duration: 3s;
+    transform: translateX(-800px);
+}
+
+.moving2 {
+    transition-property: transform;
+    transition-duration: 3s;
+    transform: translateX(-1600px);
+}
+
+#first {
+    background-image: url("images/kit1.jpg");
+}
+
+#second {
+    background-image: url("images/kit2.jpg");
+}
+
+#third {
+    background-image: url("images/kit3.jpg");
+
+}
+
+#forth {
+    background-image: url("images/kit4.jpg");
+
+}
