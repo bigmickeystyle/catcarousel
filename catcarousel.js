@@ -1,42 +1,31 @@
 (function(){
-    var cat =  document.getElementsByClassName('cat');
-    var button =  document.getElementsByClassName('button');
-    var catArray = [].slice.call(cat);
-    var buttonArray = [].slice.call(button);
+    var cats = document.getElementsByClassName('cat');
+    var buttons = document.getElementsByClassName('button');
+    var i;
     function movecat(){
-        for (var i = 0; i < catArray.length + 1; i++){
+        for (i = 0; i < cats.length; i++){
             (function(i){
                 setTimeout(function(){
+                    cats[i].className = "cat moving2";
+                    buttons[i].className = "button";
                     if (i == 3) {
-                        catArray[i].className = "cat moving2";
-                        catArray[i - 1].className = "cat";
-                        catArray[i - 3].className = "cat moving";
-                        buttonArray[i - 3].className = "button whitebutton";
-                        buttonArray[i].className = "button";
+                        cats[i - 1].className = "cat";
+                        cats[i - 3].className = "cat moving";
+                        buttons[i - 3].className = "button whitebutton";
                         movecat();
                     }
-                    else if (i == 2){
-                        catArray[i].className = "cat moving2";
-                        catArray[i - 1].className = "cat";
-                        catArray[i + 1].className = "cat moving";
-                        buttonArray[i + 1].className = "button whitebutton";
-                        buttonArray[i].className = "button";
+
+                    else {
+                        cats[i + 1].className = "cat moving";
+                        buttons[i + 1].className = "button whitebutton";
+                        if (i == 0) {
+                            cats[i + 3].className = "cat";
+                        }
+                        else {
+                            cats[i - 1].className = "cat";
+                        }
                     }
-                    else if (i == 1){
-                        catArray[i].className = "cat moving2";
-                        catArray[i - 1].className = "cat";
-                        catArray[i + 1].className = "cat moving";
-                        buttonArray[i + 1].className = "button whitebutton";
-                        buttonArray[i].className = "button";
-                    }
-                    else if (i == 0){
-                        catArray[i].className = "cat moving2";
-                        catArray[i + 3].className = "cat";
-                        catArray[i + 1].className = "cat moving";
-                        buttonArray[i + 1].className = "button whitebutton";
-                        buttonArray[i].className = "button";
-                    }
-                }, 5000 * (i + 1));
+                }, 1000 * (i + 1));
             })(i);
         }
     }

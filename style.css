@@ -55,13 +55,13 @@
 
 .moving {
     transition-property: transform;
-    transition-duration: 3s;
+    transition-duration: 0.5s;
     transform: translateX(-800px);
 }
 
 .moving2 {
     transition-property: transform;
-    transition-duration: 3s;
+    transition-duration: 0.5s;
     transform: translateX(-1600px);
 }
 
