@@ -49,20 +49,16 @@
     background-color: white;
 }
 
-.still {
-    left: 1600px;
-}
-
-.moving {
+.gomiddle {
     transition-property: transform;
     transition-duration: 0.5s;
-    transform: translateX(-800px);
+    transform: translateX(-100%);
 }
 
-.moving2 {
+.goleft {
     transition-property: transform;
     transition-duration: 0.5s;
-    transform: translateX(-1600px);
+    transform: translateX(-200%);
 }
 
 #first {
